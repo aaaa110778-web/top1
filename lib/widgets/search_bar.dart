@@ -1,25 +1,16 @@
 import 'package:flutter/material.dart';
 
-class SearchBarWidget extends StatefulWidget {
+class SearchBarWidget extends StatelessWidget {
   const SearchBarWidget({super.key});
-
-  @override
-  State<SearchBarWidget> createState() => _SearchBarWidgetState();
-}
-
-class _SearchBarWidgetState extends State<SearchBarWidget> {
-  final _controller = TextEditingController();
-  String _query = '';
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      controller: _controller,
-      onChanged: (v) => setState(() => _query = v),
       decoration: InputDecoration(
+        hintText: "Search...",
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
         prefixIcon: const Icon(Icons.search),
-        hintText: 'Search matches, teams, players...',
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+        isDense: true,
       ),
     );
   }
