@@ -1,0 +1,20 @@
+name: top1score_flutter
+description: A Flutter frontend converted from React components (Header, SearchBar, LiveMatch, LeagueSection, MatchLineup, PlayersPage, DarkModeToggle)
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Optional fonts package; remove if undesired
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
