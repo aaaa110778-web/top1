@@ -26,3 +26,4 @@ class LeagueSection extends StatelessWidget {
     );
   }
 }
+
