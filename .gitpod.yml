@@ -1,0 +1,13 @@
+tasks:
+  - name: Setup Flutter
+    init: |
+      git clone https://github.com/flutter/flutter.git -b stable --depth 1
+      export PATH="$PATH:/workspace/flutter/bin"
+      flutter pub get
+    command: |
+      export PATH="$PATH:/workspace/flutter/bin"
+      flutter run -d web-server --web-hostname=0.0.0.0 --web-port=8080
+
+ports:
+  - port: 8080
+    onOpen: open-preview
