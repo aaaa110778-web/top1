@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'screens/home_page.dart';
-import 'screens/players_page.dart';
+import 'package:top1score_flutter/screens/home_page.dart';
+import 'package:top1score_flutter/screens/players_page.dart';
 
 void main() {
   runApp(const MyApp());

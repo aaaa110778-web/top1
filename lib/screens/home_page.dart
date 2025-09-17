@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../widgets/header.dart';
-import '../widgets/search_bar.dart';
-import '../widgets/league_section.dart';
-import '../widgets/live_match_card.dart';
-import '../widgets/match_lineup.dart';
-import '../widgets/dark_mode_toggle.dart';
+import 'package:top1score_flutter/widgets/header.dart';
+import 'package:top1score_flutter/widgets/search_bar.dart';
+import 'package:top1score_flutter/widgets/league_section.dart';
+import 'package:top1score_flutter/widgets/live_match_card.dart';
+import 'package:top1score_flutter/widgets/match_lineup.dart';
+import 'package:top1score_flutter/widgets/dark_mode_toggle.dart';
 
 class HomePage extends StatelessWidget {
   final void Function(bool) onToggleTheme;
