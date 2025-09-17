@@ -1,0 +1,13 @@
+{
+  "name": "Flutter Web Dev",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "Flutter Web",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "features": {},
+  "postCreateCommand": "bash .devcontainer/setup_flutter.sh"
+}
