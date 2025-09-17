@@ -20,44 +20,11 @@ class LiveMatchCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
     return Card(
-      elevation: 1,
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('LIVE • $status • ${minute}\'', style: TextStyle(color: scheme.primary)),
-                const Icon(Icons.live_tv),
-              ],
-            ),
-            const SizedBox(height: 12),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(child: _teamTile(homeTeam, homeScore, TextAlign.start)),
-                Text('$homeScore - $awayScore', style: Theme.of(context).textTheme.headlineSmall),
-                Expanded(child: _teamTile(awayTeam, awayScore, TextAlign.end)),
-              ],
-            ),
-          ],
-        ),
+      child: ListTile(
+        title: Text("$homeTeam vs $awayTeam"),
+        subtitle: Text("Score: $homeScore - $awayScore, $status ($minute')"),
       ),
-    );
-  }
-
-  Widget _teamTile(String name, int score, TextAlign align) {
-    return Column(
-      crossAxisAlignment: align == TextAlign.start ? CrossAxisAlignment.start : CrossAxisAlignment.end,
-      children: [
-        Text(name, textAlign: align, style: const TextStyle(fontWeight: FontWeight.w600)),
-        const SizedBox(height: 4),
-        Text('Score: $score', textAlign: align),
-      ],
     );
   }
 }
